@@ -9,7 +9,7 @@ ENV PMD_HOME=/opt/pmd/pmd-bin-6.8.0
 # Install git lfs support.
 RUN apt-get -qq update && \
 # apt-get
-    apt-get install -qqy curl cppcheck ssh make cmake valgrind unzip gcc g++ && \
+    apt-get install -qqy openssh-client curl cppcheck ssh make cmake valgrind unzip gcc g++ zip smbclient && \
 # git-lfs valgrid
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
     apt-get install -qqy git-lfs && \
